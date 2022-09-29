@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block title %}Inscrever-se{% endblock %} {% block
+content %}
+<br/>
+<form method="POST">
+    <h3 align="center">Cuidado que aqui há toiro!</h3>
+    <br/>
+    <p  style="text-align: center">    <img class="q-image qu-cursor--default qu-display--block" src="https://qph.fs.quoracdn.net/main-qimg-eeb7a07c94ada51bd9ce35cf6d1eaa29" style="box-sizing: border-box; max-width: 100%; margin-left: auto; margin-right: auto;">
+    </p>
+    <br/>
+  <div class="form-group">
+    <label for="email">Endereço de email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Email aqui"
+    />
+  </div>
+  <div class="form-group">
+    <label for="firstName">Primeiro Nome</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      placeholder="Primeiro nome aqui"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password1"
+      name="password1"
+      placeholder="Password aqui"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password2">Password (Confirme)</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password2"
+      name="password2"
+      placeholder="Confirme password"
+    />
+  </div>
+  <br />
+        <h4 align="center">Tem a certeza?<span> 🙄</span> </h4>
+
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-success">Submeter</button>
+    </div>
+</form>
+<br/>
+{% endblock %}

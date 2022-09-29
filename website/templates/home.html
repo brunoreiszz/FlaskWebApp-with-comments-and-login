@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Montijo{% endblock %}
+{% block content %}
+    <audio autoplay loop src="../static/audio/toyzao.mp3"></audio>
+<div>
+    <br/>
+    <br/>
+    <br/>
+    <p align="center"><a href="/capital"><img
+        src="../static/images/OzeArv_3.jpg"
+        width="700"
+        height="250"
+    /></a></p>
+    <h3 style=padding-left:200px><a href="/capital" style="color: green">CAPITAL DA FLOR</a></h3>
+    <br />
+    <p style="padding-left:200px; padding-right: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sint sapiente iste molestias? Saepe pariatur, impedit architecto veniam excepturi, dolore, deleniti vitae cumque quibusdam quidem dolorum delectus libero doloribus at?</p>
+    <br />
+    <br/>
+    <br/>
+    <p align="center"><a href="/history"><img
+        src="../static/images/desenhobaldi.jpg"
+        width="700"
+        height="250"
+    /></a></p>
+    <h3 style=padding-left:200px><a href="/history" style="color: green">HISTÓRIA</a></h3>
+    <br />
+    <p style="padding-left:200px; padding-right: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sint sapiente iste molestias? Saepe pariatur, impedit architecto veniam excepturi, dolore, deleniti vitae cumque quibusdam quidem dolorum delectus libero doloribus at?</p>
+   
+<br/>
+    <br/>
+    <p align="center"><a href="/attractions"><img
+        src="../static/images/touro-home.jpg"
+        width="700"
+        height="275"
+    /></a></p>
+    <h3 style=padding-left:200px><a href="/attractions" style="color: green">ATRAÇÕES</a></h3>
+    <br />
+    <p style="padding-left:200px; padding-right: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sint sapiente iste molestias? Saepe pariatur, impedit architecto veniam excepturi, dolore, deleniti vitae cumque quibusdam quidem dolorum delectus libero doloribus at?</p>
+   
+</div>
+<br/>
+<br/>
+<br/>
+<div>
+<h4>Comentários</h4>
+<ul class="list-group list-group-flush" id="comments">
+  {% for comment in comments %}
+  <li class="list-group-item">
+    {{ comment.data }}
+  </br><label><strong>{{ comment.user_name }}</strong></label>
+      <label>// {{ comment.date }}</label>
+    <button type="button" class="close" onClick="deleteComment({{ comment.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="comment" id="comment" class="form-control"
+            placeholder="Deixe-nos a sua opinião sobre o Montijo"></textarea>
+  <br />
+  <div align="right">
+    <button type="submit" class="btn btn-success">Comentar</button>
+  </div>
+</form>
+</div>
+{% endblock %}
